@@ -23,6 +23,7 @@ The project focuses on delivering a secure, scalable, and user-friendly solution
 AIRWAY-TICKETS-MANAGEMENT-SYSTEM/
 ├── client/
 ├── database/
+├── public/
 ├── server/
 └── README.md
 ```
@@ -47,7 +48,20 @@ client/
 ### Database (MySQL)
 ```js
 database/
+├── airway_tickets_management_system_db_erd.mwb
+├── airway_tickets_management_system_db_erd.pdf
+├── airway_tickets_management_system_db_erd.png
 └── schema.sql
+```
+
+<div align="center">
+  <img src="./public/airway_tickets_management_system_db_erd.png" alt="Airway Tickets Management System ERD" width="800" />
+</div>
+
+### Public
+```js
+database/
+└── airway_tickets_management_system_db_erd.png
 ```
 
 ### Backend (SpringBoot Java)
