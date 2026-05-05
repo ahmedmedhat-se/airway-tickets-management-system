@@ -16,7 +16,84 @@ The project focuses on delivering a secure, scalable, and user-friendly solution
 **License:** Proprietary – All rights reserved
 
 ---
+## Project Structure
 
+### AIRWAY-TICKETS-MANAGEMENT-SYSTEM
+```js
+AIRWAY-TICKETS-MANAGEMENT-SYSTEM/
+├── client/
+├── database/
+├── server/
+└── README.md
+```
+
+### Frontend (React.js + Vite)
+```js
+client/
+├── node_modules/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── vite.config.js
+```
+
+### Database (MySQL)
+```js
+database/
+└── schema.sql
+```
+
+### Backend (SpringBoot Java)
+```js
+server/
+├── .mvn/
+│   └── wrapper/
+│       └── maven-wrapper.properties
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── airway/
+│   │   │           └── tickets_management_system/
+│   │   │               ├── TicketsManagementSystemApplication.java
+│   │   │               ├── config/
+│   │   │               │   └── DatabaseConfig.java
+│   │   │               ├── controllers/
+│   │   │               │   ├── AuthController.java
+│   │   │               │   └── FlightController.java
+│   │   │               ├── middleware/
+│   │   │               │   └── AuthInterceptor.java
+│   │   │               ├── models/
+│   │   │               │   ├── Flight.java
+│   │   │               │   ├── Passenger.java
+│   │   │               │   └── User.java
+│   │   │               └── routes/
+│   │   │                   └── WebConfig.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── airway/
+│                   └── tickets_management_system/
+│                       └── TicketsManagementSystemApplicationTests.java
+├── target/
+├── .gitattributes
+├── .gitignore
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+└── pom.xml
+```
+
+---
 ## Technologies Used
 
 ### Frontend Technologies
@@ -43,6 +120,37 @@ The project focuses on delivering a secure, scalable, and user-friendly solution
 | ![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white) | Database Design & Management | 8.x |
 | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) | Version Control | 2.x |
 | ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) | API Testing | Latest |
+
+---
+## Installation
+
+### Frontend Dependencies
+**Step 1. Setup React (JavaScript) + Vite Project:**
+```bash
+npm create vite@latest
+```
+
+**Step 2: Navigate and install dependencies:**
+```bash
+cd client
+npm install
+```
+
+**Step 3: Install all dependencies:**
+```bash
+# React Router DOM
+npm install react-router-dom
+
+# Bootstrap 5
+npm install bootstrap
+
+# Font Awesome (all icon packages)
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/react-fontawesome
+```
 
 ---
 ## License
