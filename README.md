@@ -10,6 +10,10 @@
 
 The project focuses on delivering a secure, scalable, and user-friendly solution for modern airline ticketing processes.
 
+<div align="center">
+  <img src="./public/uml-diagram.png" alt="Airway Tickets Management System - UML Diagram" width="800" />
+</div>
+
 **Developed by:** Ahmed Medhat - Ali Ahmed - Mohammed Iraqi
 **Project Type:** Full-Stack Web Application  
 **Architecture:** Client-Server Architecture  
@@ -17,6 +21,8 @@ The project focuses on delivering a secure, scalable, and user-friendly solution
 
 ---
 ## Project Structure
+![Project Structure Map](./public/project-strucutre-map.png)
+*Project Structure Map*
 
 ### AIRWAY-TICKETS-MANAGEMENT-SYSTEM
 ```js
@@ -54,9 +60,8 @@ database/
 └── schema.sql
 ```
 
-<div align="center">
-  <img src="./public/airway_tickets_management_system_db_erd.png" alt="Airway Tickets Management System ERD" width="800" />
-</div>
+![ERD](./public/airway_tickets_management_system_db_erd.png)
+*ERD*
 
 ### Public
 ```js
