@@ -1,23 +1,57 @@
-# Airway Tickets Management System
+# SkyLine - Airway Tickets Management System
 
-> Developed by **Ahmed Medhat - Ali Ahmed - Mohammed Iraqi**
+> Developed by **Ahmed Medhat - Ali Ahmed - Mohammed Iraqi - Marwan Mohammed - Mazen Muhammed**
 
 ---
 
 ## Project Overview
 
-**Airway Tickets Management System** is a full-stack web application designed to streamline airline reservation, ticket booking, and flight management operations. The system provides a modern digital platform for passengers to search flights, reserve seats, manage bookings, and track ticket details, while administrators can efficiently manage flights, schedules, customers, and system operations through a centralized dashboard.
+**SkyLine - Airway Tickets Management System** is a full-stack web application designed to streamline airline reservation, ticket booking, and flight management operations. The system provides a modern digital platform for passengers to search flights, reserve seats, manage bookings, and track ticket details, while administrators can efficiently manage flights, schedules, customers, and system operations through a centralized dashboard.
 
 The project focuses on delivering a secure, scalable, and user-friendly solution for modern airline ticketing processes.
 
 <div align="center">
-  <img src="./public/uml-diagram.png" alt="Airway Tickets Management System - UML Diagram" width="800" />
+  <img src="./public/uml-diagram.png" alt="SkyLine - Airway Tickets Management System - UML Diagram" width="800" />
 </div>
 
 **Developed by:** Ahmed Medhat - Ali Ahmed - Mohammed Iraqi
 **Project Type:** Full-Stack Web Application  
 **Architecture:** Client-Server Architecture  
 **License:** Proprietary – All rights reserved
+
+---
+# Web System Screenshots
+### Landing
+![Landing](./public/interfaces/landing.jpg)
+*Landing*
+
+### Homepage
+![Homepage](./public/interfaces/homepage.jpg)
+*Homepage*
+
+### Register Form
+![Register Form](./public/interfaces/register-form.jpg)
+*Register Form*
+
+### Login Form
+![Login Form](./public/interfaces/login-form.jpg)
+*Login Form*
+
+### Passenger Homepage
+![Passenger Homepage](./public/interfaces/passenger-homepage.jpg)
+*Passenger Homepage*
+
+### Admin Dashboard
+![Admin Dashboard](./public/interfaces/admin-dashboard.jpg)
+*Admin Dashboard*
+
+### Flights Management
+![Flights Management](./public/interfaces/flights-management.jpg.jpg)
+*Flights Management*
+
+### Bookings Management
+![Bookings Management](./public/interfaces/bookings-management.jpg)
+*Bookings Management*
 
 ---
 ## Project Structure
@@ -33,6 +67,9 @@ AIRWAY-TICKETS-MANAGEMENT-SYSTEM/
 ├── server/
 └── README.md
 ```
+
+![Project Strucutre Map](./public/project-strucutre-map.png)
+*Project Strucutre Map*
 
 ### Frontend (React.js + Vite)
 ```js
@@ -62,12 +99,6 @@ database/
 
 ![ERD](./public/airway_tickets_management_system_db_erd.png)
 *ERD*
-
-### Public
-```js
-database/
-└── airway_tickets_management_system_db_erd.png
-```
 
 ### Backend (SpringBoot Java)
 ```js
@@ -111,6 +142,9 @@ server/
 ├── mvnw.cmd
 └── pom.xml
 ```
+
+![MVC Request Flow](./public/mvc-request-flow.png)
+*MVC Request Flow*
 
 ---
 ## Technologies Used
