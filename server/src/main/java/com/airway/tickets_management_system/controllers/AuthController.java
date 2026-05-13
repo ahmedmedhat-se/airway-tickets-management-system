@@ -36,7 +36,7 @@ public class AuthController {
     private static final int MAX_INPUT_LENGTH = 500;
     
     private static final Pattern USERNAME_PATTERN = Pattern.compile("^[a-zA-Z0-9._-]{3,50}$");
-    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,128}$");
+    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^a-zA-Z\\d]).{8,128}$");
     private static final Pattern EMAIL_PATTERN = Pattern.compile("^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$");
     private static final Pattern FULLNAME_PATTERN = Pattern.compile("^[a-zA-Z\\s'\\-]{2,100}$");
     private static final Pattern ROLE_PATTERN = Pattern.compile("^(USER|ADMIN)$");
@@ -165,7 +165,7 @@ public class AuthController {
         }
         
         TypedQuery<User> query = entityManager
-                .createQuery("SELECT u FROM User u WHERE u.username = :username", User.class);
+                .createQuery("SELECT u FROM User u WHERE LOWER(u.username) = LOWER(:username)", User.class);
         query.setParameter("username", username);
         
         try {

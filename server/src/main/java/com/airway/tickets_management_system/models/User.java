@@ -15,7 +15,7 @@ public class User {
     @Column(unique = true, nullable = false, length = 50)
     private String username;
     
-    @Column(nullable = false, length = 128)
+    @Column(nullable = false, length = 255)
     @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
     
@@ -52,7 +52,7 @@ public class User {
     }
     
     public void setUsername(String username) {
-        this.username = sanitizeInput(username);
+        this.username = username;
     }
     
     public String getPassword() {
@@ -60,7 +60,7 @@ public class User {
     }
     
     public void setPassword(String password) {
-        this.password = sanitizeInput(password);
+        this.password = password;
     }
     
     public String getEmail() {
@@ -68,7 +68,7 @@ public class User {
     }
     
     public void setEmail(String email) {
-        this.email = sanitizeInput(email);
+        this.email = email;
     }
     
     public String getFullName() {
@@ -76,7 +76,7 @@ public class User {
     }
     
     public void setFullName(String fullName) {
-        this.fullName = sanitizeInput(fullName);
+        this.fullName = fullName;
     }
     
     public String getRole() {
@@ -85,33 +85,5 @@ public class User {
     
     public void setRole(String role) {
         this.role = role != null ? role.toUpperCase().trim() : null;
-    }
-    
-    private String sanitizeInput(String input) {
-        if (input == null) {
-            return null;
-        }
-        
-        input = input.trim();
-        
-        input = input.replace("&", "&amp;")
-                     .replace("<", "&lt;")
-                     .replace(">", "&gt;")
-                     .replace("\"", "&quot;")
-                     .replace("'", "&#x27;")
-                     .replace("/", "&#x2F;");
-        
-        input = input.replaceAll("(?i)<script.*?>.*?</script.*?>", "")
-                     .replaceAll("(?i)<.*?javascript:.*?>.*?</.*?>", "")
-                     .replaceAll("(?i)<.*?\\s+on.*?=.*?>.*?</.*?>", "")
-                     .replaceAll("(?i)<.*?vbscript:.*?>.*?</.*?>", "")
-                     .replaceAll("(?i)<.*?expression\\(.*?>.*?</.*?>", "")
-                     .replaceAll("(?i)<.*?eval\\(.*?>.*?</.*?>", "");
-        
-        input = input.replaceAll("(?i)\\b(SELECT|INSERT|UPDATE|DELETE|DROP|UNION|ALTER|CREATE|TRUNCATE)\\b", "");
-        
-        input = input.replaceAll("\\s+", " ");
-        
-        return input;
     }
 }
